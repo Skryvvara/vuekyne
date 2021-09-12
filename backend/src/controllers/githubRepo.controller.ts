@@ -11,14 +11,14 @@ const langCache = new CacheContainer(new MemoryStorage());
 
 export class GithubRepoController extends Controller {
 
-    @Cache(langCache, {ttl: 3600})
+    @Cache(langCache, {ttl: AppConfig.GITHUB_CACHE_TTL})
     protected static async fetchLanguages(url: string): Promise<string[]> {
         let result = await axios.get(url, AppConfig.getGithubAuthHeader());
         let data = Object.keys(result.data);
         return data;
     }
 
-    @Cache(repoCache, {ttl: 3600})
+    @Cache(repoCache, {ttl: AppConfig.GITHUB_CACHE_TTL})
     protected static async fetchRepos(url: string): Promise<GithubRepository[]> {
         const repos = await axios.get<GithubRepository[]>(url, AppConfig.getGithubAuthHeader()).then(res => res.data);
 
