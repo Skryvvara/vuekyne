@@ -1,4 +1,4 @@
-import { GithubOwner } from "./githubOwner.model";
+import { GithubUser } from "./githubUser.model";
 
 export interface GithubRepository {
     id: number;
@@ -6,7 +6,7 @@ export interface GithubRepository {
     name: string;
     full_name: string;
     private: boolean;
-    owner: GithubOwner;
+    owner: GithubUser;
     html_url: string;
     description: string;
     fork: boolean;
