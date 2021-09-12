@@ -9,6 +9,7 @@ export interface GithubRepository {
     owner: GithubUser;
     html_url: string;
     description: string;
+    languages?: any;
     fork: boolean;
     url: string;
     forks_url: string;
