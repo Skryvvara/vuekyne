@@ -22,9 +22,9 @@ export class GithubRepoController extends Controller {
     protected static async fetchRepos(url: string): Promise<GithubRepository[]> {
         const repos = await axios.get<GithubRepository[]>(url, AppConfig.getGithubAuthHeader()).then(res => res.data);
 
-        for(const repo of repos) {
+        await Promise.all(repos.map(async(repo) => {
             repo.languages = await this.fetchLanguages(repo.languages_url);
-        }
+        }));
 
         return repos;
     }
