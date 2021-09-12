@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "experimentalDecorators": true,
+        "rootDir": "./backend/src",
+        "outDir": "./build",
+        "esModuleInterop": true,
+        "strict": false,
+    },
+    "exclude": [
+        "./frontend"
+    ]
+}
