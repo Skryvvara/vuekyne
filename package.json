@@ -12,7 +12,7 @@
     "b:build": "tsc",
     "f:dev": "cd ./frontend && yarn serve",
     "f:build": "cd ./frontend && yarn build",
-    "m:dev": "concurrently -n server,client -c cyan,blue 'yarn b:dev' 'yarn f:dev'",
+    "m:dev": "concurrently -n server,client -c cyan,blue \"yarn b:dev\" \"yarn f:dev\"",
     "m:build": "yarn b:build && yarn f:build"
   },
   "dependencies": {
