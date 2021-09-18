@@ -1,4 +1,5 @@
-import app from "./server";
+import Server from "./server";
 import AppConfig from "./config/config";
 
-const server = app.listen(AppConfig.PORT);
+const server = new Server(AppConfig.PORT);
+server.startServer()
