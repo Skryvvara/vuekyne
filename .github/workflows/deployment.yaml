@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2+
 
       - name: Run tests
-      - run: yarn b:test
+        run: yarn b:test
 
   deploy:
     runs-on: [ubuntu-latest]
