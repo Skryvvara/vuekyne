@@ -34,7 +34,7 @@
     <div class="grid-2">
       <div class="grid-2-text">
         <h3><span class="app-text">Privacy</span> is a concern!</h3>
-        <p>I'm very concerned with <strong>privacy</strong> and <strong>cybersecurity</strong> thus I'm not only collectiong <strong>no data</strong> from you. I'm also keeping my website and you <strong>safe</strong>!</p>
+        <p>I'm very concerned with <strong>privacy</strong> and <strong>cybersecurity</strong> thus I'm not only collecting <strong>no data</strong> from you. I'm also keeping my website and you <strong>safe</strong>!</p>
       </div>
       <div>
         <img src="../../assets/risk_free.svg" alt="">
