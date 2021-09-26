@@ -1,9 +1,13 @@
 import { AxiosRequestConfig } from 'axios';
 import dotenv from 'dotenv';
 
-dotenv.config({
-    path: '../../.env'
-});
+if (process.env.NODE_ENV == 'production') {
+    dotenv.config();
+} else {
+    dotenv.config({
+        path: '../../.env'
+    });
+}
 
 class AppConfig {
     NODE_ENV: string
