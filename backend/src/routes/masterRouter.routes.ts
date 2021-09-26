@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import GithubRouter from './github.router';
+import GithubRouter from './github.routes';
 
 const Routes = Router();
 
