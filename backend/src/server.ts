@@ -3,23 +3,17 @@ import { Server as HttpServer } from 'http';
 import compression from 'compression';
 import Routes from './routes/masterRouter.routes';
 
-import { Middleware } from './middlewares/middleware';
-import { SetHeaderMiddleware } from './middlewares/setHeaders.middleware';
-
 class Server {
     public port: number;
     public app: Application;
     private server: HttpServer;
-    private middlewares: Middleware[];
 
     constructor(port: number = 3000) {
         this.app = Express();
+        this.app.settings = {
+            'x-powered-by': false
+        };
         this.port = port;
-
-        this.middlewares = [
-            new SetHeaderMiddleware,
-        ];
-        this.setupMiddlewares();
 
         this.app.use(json());
         this.app.use(urlencoded({ extended: true }));
@@ -40,12 +34,6 @@ class Server {
     public stopServer() {
         if (this.server.listening) {
             this.server.close();
-        }
-    }
-
-    public setupMiddlewares() {
-        for(const middleware of this.middlewares) {
-            this.app.use(middleware.defaultFunction)
         }
     }
 
