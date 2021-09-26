@@ -1,7 +1,7 @@
 import Express, { Application, json, urlencoded } from 'express';
 import { Server as HttpServer } from 'http';
 import compression from 'compression';
-import Routes from './routes/masterRouter.router';
+import Routes from './routes/masterRouter.routes';
 
 import { Middleware } from './middlewares/middleware';
 import { SetHeaderMiddleware } from './middlewares/setHeaders.middleware';

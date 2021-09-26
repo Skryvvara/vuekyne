@@ -20,10 +20,13 @@ export class GithubRepoController extends Controller {
 
     @Cache(repoCache, {ttl: AppConfig.GITHUB_CACHE_TTL})
     protected static async getRepositories(url: string): Promise<GithubRepository[]> {
-        const repositories = await axios.get<GithubRepository[]>(url, AppConfig.GITHUB_AUTH_HEADER).then(res => res.data);
+        const repositories = await axios.get<GithubRepository[]>(url, AppConfig.GITHUB_AUTH_HEADER)
+                                            .then(res => res.data)
+                                            .then((res) => res.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()));
 
         await Promise.all(repositories.map(async(repository) => {
             repository.languages = await this.getRepositoryLanguages(repository.languages_url);
+            repository.languages.sort((a: string, b: string) => a.localeCompare(b));
         }));
 
         return repositories;

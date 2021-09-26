@@ -10,7 +10,7 @@ class AppConfig {
     PORT: number
     GITHUB_TOKEN: string
     GITHUB_CACHE_TTL: number
-    GITHUB_AUTH_HEADER: Object
+    GITHUB_AUTH_HEADER: AxiosRequestConfig
 
     constructor() {
         this.NODE_ENV = process.env.NODE_ENV || "dev";
