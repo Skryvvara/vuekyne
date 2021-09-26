@@ -31,9 +31,12 @@ class Server {
         this.server = this.app.listen(port, callback());
     }
 
-    public stopServer() {
+    public stopServer(): boolean {
         if (this.server.listening) {
             this.server.close();
+            return true;
+        } else {
+            return false;
         }
     }
 
