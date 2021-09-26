@@ -7,6 +7,7 @@
 
 .grid-2 {
   display: grid;
+  place-items: center;
 }
 
 .grid-2-text {
@@ -21,11 +22,12 @@
   h1, h2, h3 {
     font-size: 2rem;
     letter-spacing: 0.05ch;
+    margin-bottom: 6px;
   }
   p {
     font-size: 1.25rem;
     color: var(--colour-gray-300);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 }
 

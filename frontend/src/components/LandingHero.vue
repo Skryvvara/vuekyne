@@ -1,5 +1,5 @@
 <template>
-<base-section class="landing-hero-section">
+<base-section class="landing-hero-section" :id="'home'">
   <div class="wrapper">
     <div class="grid-2">
       <div class="grid-2-text">
@@ -34,7 +34,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.landing-hero-section {
-  margin-top: 3rem;
-}
+
 </style>

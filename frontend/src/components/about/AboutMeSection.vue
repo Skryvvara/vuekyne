@@ -14,7 +14,7 @@
     <div class="grid-2">
       <div class="grid-2-text">
         <h3><span class="app-text">Improving</span> my <span class="app-text">Skills</span> on a daily basis!</h3>
-        <p>Working on apps, websites, apis, etc. I learn how to <strong>create better designs</strong> and how to use <strong>modern technology</strong> every day. This site is written with <strong>TypeScript</strong>, <strong>Vue.js</strong> and <strong>SCSS</strong> for example</p>
+        <p>Working on apps, websites, apis, etc. I learn how to <strong>create better designs</strong> and how to use <strong>modern technology</strong> every day. This site is made with <strong>TypeScript</strong>, <strong>Vue.js</strong> and <strong>SCSS</strong> for example</p>
       </div>
       <div>
         <img src="../../assets/website.svg" alt="Boy looking at different UI designs">
@@ -26,15 +26,15 @@
         <img src="../../assets/project_completion.svg" alt="Girl showing completed Projects">
       </div>
       <div class="grid-2-text">
-        <h3><span class="app-text">Routined</span> and <span class="app-text">Organized</span>.</h3>
-        <p>Having worked on a fair share of projects I got <strong>routined</strong> in writing my code. Paired with <strong>good organization</strong> projects are finished in no time!</p>
+        <h3><span class="app-text">Routine</span> and <span class="app-text">Organization</span>.</h3>
+        <p>Having worked on a fair share of projects brought up <strong>routines</strong> in writing code. Paired with <strong>good organization</strong> projects are finished in no time!</p>
       </div>
     </div>
 
     <div class="grid-2">
       <div class="grid-2-text">
         <h3><span class="app-text">Privacy</span> is a concern!</h3>
-        <p>I'm very concerned with <strong>privacy</strong> and <strong>cybersecurity</strong> thus I'm not only collecting <strong>no data</strong> from you. I'm also keeping my website and you <strong>safe</strong>!</p>
+        <p>I'm very concerned with <strong>privacy</strong> and <strong>cybersecurity</strong> thus I'm not only collecting <strong>no data</strong> from you. I'm also keeping you and my website <strong>safe</strong>!</p>
       </div>
       <div>
         <img src="../../assets/risk_free.svg" alt="">

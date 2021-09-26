@@ -1,6 +1,6 @@
 {
   "name": "vuekyne.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "express/vue remaster of darkyne.com",
   "main": "index.js",
   "repository": "https://github.com/xdarkyne/vuekyne",

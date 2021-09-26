@@ -31,6 +31,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .base-section {
   background: var(--colour-gray-900);
+  padding-top: 4rem;
 
   &:nth-child(even) {
     background: var(--colour-gray-800);

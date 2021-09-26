@@ -8,10 +8,10 @@
       <div class="right">
         <button class="nav-menu-button" @click="visible = !visible"><menu-icon></menu-icon></button>
         <ul class="main-nav-list" :class="`main-nav-list-${visible ? 'show' : 'hidden'}`">
-          <li class="main-nav-item"><a href="#home" class="main-nav-link">Home</a></li>
-          <li class="main-nav-item"><a href="#projects" class="main-nav-link">Work</a></li>
-          <li class="main-nav-item"><a href="#about" class="main-nav-link">About</a></li>
-          <li class="main-nav-item"><a href="#contact" class="main-nav-link">Contact</a></li>
+          <li class="main-nav-item"><a href="#home" class="main-nav-link"><home-icon></home-icon> Home</a></li>
+          <li class="main-nav-item"><a href="#projects" class="main-nav-link"><code-icon></code-icon> Work</a></li>
+          <li class="main-nav-item"><a href="#about" class="main-nav-link"><information-circle-icon></information-circle-icon> About</a></li>
+          <li class="main-nav-item"><a href="#contact" class="main-nav-link"><chat-icon></chat-icon> Contact</a></li>
         </ul>
       </div>
     </div>
@@ -21,12 +21,16 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { MenuIcon } from "@heroicons/vue/solid";
+import { MenuIcon, HomeIcon, CodeIcon, InformationCircleIcon, ChatIcon, } from "@heroicons/vue/solid";
 
 export default defineComponent({
 	name: "MainNavigation",
   components: {
-    MenuIcon
+    MenuIcon,
+    HomeIcon,
+    CodeIcon,
+    InformationCircleIcon,
+    ChatIcon,
   },
   data() {
     return {
@@ -48,11 +52,12 @@ export default defineComponent({
 
   .nav-menu-button {
     height: fit-content;
-    background: var(--colour-gray-900);
+    background: var(--colour-gray-800);
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0.1rem 0.1rem 0.35rem rgba(0, 0, 0, .65);
     border: none;
 
     svg {
@@ -105,7 +110,7 @@ export default defineComponent({
     list-style: none;
     border-radius: 6px;
     position: absolute;
-    top: 90%;
+    top: 95%;
     z-index: 1;
 
     &.main-nav-list-show {
@@ -128,17 +133,24 @@ export default defineComponent({
     }
 
     .main-nav-link {
-      min-width: 100px;
+      min-width: 150px;
       color: var(--colour-gray-50);
       font-size: 1.25rem;
       padding: 4px 4px;
       margin: 2px 0;
       border-radius: 4px;
       text-decoration: none;
+      display: flex;
+      align-items: center;
       transition: all 300ms ease-in-out;
 
       &:hover {
         background: var(--colour-gray-600);
+      }
+
+      svg {
+        height: 20px;
+        margin-right: 4px;
       }
     }
   }
@@ -177,6 +189,8 @@ export default defineComponent({
           color: var(--colour-app-green);
           background: transparent;
         }
+
+        svg { display: none; }
       }
     }
   }
