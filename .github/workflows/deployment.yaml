@@ -25,7 +25,7 @@ jobs:
         run: mv build/* ./
 
       - name: Tar files
-        run: tar -czf dist.tar.gz node_modules controllers models public routes index.js server.js package.json
+        run: tar -czf dist.tar.gz node_modules config controllers models public routes index.js server.js package.json
 
       - name: Copy dist.tar.gz to server via scp
         uses: garygrossgarten/github-action-scp@release
@@ -47,6 +47,6 @@ jobs:
           port: 22
           script: |
             cd ${{ secrets.DEPLOY_PATH }}
-            rm -rf node_modules controllers models public routes index.js server.js package.json
+            rm -rf node_modules config controllers models public routes index.js server.js package.json
             tar -xf dist.tar.gz
             rm dist.tar.gz
