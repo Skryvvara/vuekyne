@@ -32,6 +32,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import "./scss/main.scss";
+
 :root {
   --colour-gray-50: #FAFAFA;
   --colour-gray-100: #F4F4F5;
@@ -51,8 +53,6 @@ export default defineComponent({
   --colour-app-green-100: hsl(163, 53%, 70%);
   --colour-app-green-200: hsl(163, 53%, 60%);
   --colour-app-green-900: hsl(163, 73%, 25%);
-  --colour-app-gray: #F9EEF0;
-  --colour-app-pink: #E8BEE7;
 }
 
 #app {

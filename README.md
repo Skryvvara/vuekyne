@@ -33,7 +33,7 @@ Faster, Cleaner, Prettier, Better.
 - [ ] Optmize Frontend further for mobile and tablets
 - [ ] Lazy Load Images for better performance
 - [ ] Rewrite Vue Components to reduce redundancy
-- [ ] Earth (Orbit/Moon)
+- [ ] Optimize Page Speed
 - [ ] Write Documentation for Frontend
 
 ## Technologies Used
@@ -54,3 +54,4 @@ Faster, Cleaner, Prettier, Better.
 
 Thanks a lot to:
 - **Heroicons** | Amazing svg Icons 
+- **Flexiple** | Beautiful Illustration
