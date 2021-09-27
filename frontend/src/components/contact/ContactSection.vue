@@ -1,11 +1,8 @@
 <template>
 <base-section :sectionTitle="'Contact me'" :id="'contact'">
   <div class="wrapper">
-    <div class="grid-2">
-      <div>
-        <img src="../../assets/questions.svg" alt="A customer asking questions">
-      </div>
-      <div class="grid-2-text">
+    <image-hero :imageSrc="require('../../assets/questions.svg')" :imageAlt="'A customer asking questions'" :reverse="true" :hideOnMobile="true">
+      <template v-slot:text>
         <h3>Still have <span class="app-text">Questions</span>? Send me a <span class="app-text">message</span>!</h3>
         <form action="">
           <fieldset>
@@ -27,8 +24,8 @@
 
           <button class="form-send-button">Send</button>
         </form>
-      </div>
-    </div>
+      </template>
+    </image-hero>
   </div>
 </base-section>
 </template>
@@ -37,12 +34,14 @@
 import { defineComponent } from "vue";
 import BaseSection from "../base/BaseSection.vue";
 import BaseLink from "../base/BaseLink.vue";
+import ImageHero from "../hero/ImageHero.vue";
 
 export default defineComponent({
   name: "ContactSection",
   components: {
     BaseSection,
-    BaseLink
+    BaseLink,
+    ImageHero
   }
 });
 </script>

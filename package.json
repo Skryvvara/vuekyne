@@ -12,8 +12,10 @@
     "b:build": "tsc",
     "b:test": "jest --coverage",
     "f:dev": "cd ./frontend && yarn serve",
+    "f:install": "cd frontend && yarn install",
     "f:build": "cd ./frontend && yarn build",
     "m:dev": "concurrently -n server,client -c cyan,blue \"yarn b:dev\" \"yarn f:dev\"",
+    "m:install": "yarn install & yarn f:install",
     "m:build": "yarn b:build && yarn f:build"
   },
   "dependencies": {
