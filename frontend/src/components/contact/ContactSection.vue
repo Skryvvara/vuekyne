@@ -74,7 +74,7 @@ fieldset {
 
     &:focus {
       outline: none;
-      border: 1px solid var(--colour-app-green);
+      border: 1px solid var(--colour-green);
     }
   }
 
@@ -98,15 +98,16 @@ legend {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: var(--colour-gray-900);
-    background: var(--colour-app-green);
-    border: 1px solid var(--colour-app-green);
+    color: var(--colour-green-100);
+    background: var(--colour-green);
+    border: 1px solid var(--colour-green);
     border-radius: 4px;
+    cursor: pointer;
 
     transition: all 150ms ease-in-out;
 }
 .form-send-button:hover {
-    background: var(--colour-app-green-900);
-    border: 1px solid var(--colour-app-green-900);
+    background: var(--colour-green-900);
+    border: 1px solid var(--colour-green-900);
 }
 </style>

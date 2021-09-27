@@ -16,15 +16,15 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .app-link {
-  color: var(--colour-app-green);
+  color: var(--colour-green);
   text-decoration: none;
   font-weight: bold;
   border-bottom: 1px solid transparent;
   transition: all 300ms ease-in-out;
 
   &:hover {
-    color: var(--colour-app-green-900);
-    border-color: var(--colour-app-green-900);
+    color: var(--colour-green-900);
+    border-color: var(--colour-green-900);
   }
 }
 </style>

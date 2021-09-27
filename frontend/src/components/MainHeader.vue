@@ -96,7 +96,7 @@ export default defineComponent({
     transition: color 250ms ease-in-out;
 
     &:hover {
-      color: var(--colour-app-green);
+      color: var(--colour-green);
     }
   }
 
@@ -186,7 +186,7 @@ export default defineComponent({
         margin: 0;
 
         &:hover {
-          color: var(--colour-app-green);
+          color: var(--colour-green);
           background: transparent;
         }
 

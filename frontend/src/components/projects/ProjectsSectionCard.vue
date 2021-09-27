@@ -76,7 +76,7 @@ export default defineComponent({
 
   .project-card-timestamps {
     padding: 10px 10px 0 10px;
-    color: var(--colour-gray-400);
+    color: var(--colour-gray-300);
     display: flex;
     margin-bottom: 4px;
 

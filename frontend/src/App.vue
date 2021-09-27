@@ -48,11 +48,11 @@ export default defineComponent({
   --colour-gray-850: #202022;
   --colour-gray-900: #18181B;
   --colour-gray-1000: #0F0F10;
-  //--colour-app-green: #158566;
-  --colour-app-green: hsl(163, 73%, 30%);
-  --colour-app-green-100: hsl(163, 53%, 70%);
-  --colour-app-green-200: hsl(163, 53%, 60%);
-  --colour-app-green-900: hsl(163, 73%, 25%);
+  //--colour-green: #158566;
+  --colour-green: hsl(163, 73%, 30%);
+  --colour-green-100: #edffff;
+  --colour-green-200: #82e4c1;
+  --colour-green-900: hsl(163, 73%, 25%);
 }
 
 #app {
