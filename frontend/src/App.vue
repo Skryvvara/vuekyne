@@ -3,30 +3,24 @@
     <main-header></main-header>
     <landing-hero></landing-hero>
     <projects-section></projects-section>
-    <about-me-section></about-me-section>
+    <about-me-section v-if="true"></about-me-section>
     <contact-section></contact-section>
     <main-footer></main-footer>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import LandingHero from "./components/LandingHero.vue";
-import MainHeader from "./components/MainHeader.vue";
-import MainFooter from "./components/MainFooter.vue";
-import ProjectsSection from "./components/projects/ProjectsSection.vue";
-import AboutMeSection from "./components/about/AboutMeSection.vue";
-import ContactSection from "./components/contact/ContactSection.vue";
+import { defineComponent, defineAsyncComponent } from "vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    LandingHero,
-    MainHeader,
-    MainFooter,
-    ProjectsSection,
-    AboutMeSection,
-    ContactSection
+    LandingHero: defineAsyncComponent(() => import("./components/LandingHero.vue")),
+    MainHeader: defineAsyncComponent(() => import("./components/MainHeader.vue")),
+    MainFooter: defineAsyncComponent(() => import("./components/MainFooter.vue")),
+    ProjectsSection: defineAsyncComponent(() => import("./components/projects/ProjectsSection.vue")),
+    AboutMeSection: defineAsyncComponent(() => import("./components/about/AboutMeSection.vue")),
+    ContactSection: defineAsyncComponent(() => import("./components/contact/ContactSection.vue"))
   }
 });
 </script>
