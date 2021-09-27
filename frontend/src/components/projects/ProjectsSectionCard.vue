@@ -45,8 +45,15 @@ export default defineComponent({
   },
   mounted() {
     if (this.repository != null) {
-      this.createdAtString = new Date(this.repository.created_at).toLocaleString('de');
-      this.updatedAtString = new Date(this.repository.updated_at).toLocaleString('de');
+      let timeOptions: Intl.DateTimeFormatOptions = {
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      };
+      this.createdAtString = new Date(this.repository.created_at).toLocaleString('de', timeOptions);
+      this.updatedAtString = new Date(this.repository.updated_at).toLocaleString('de', timeOptions);
     }
   },
   components: {

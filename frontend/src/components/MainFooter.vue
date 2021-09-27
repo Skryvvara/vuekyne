@@ -2,8 +2,7 @@
 <footer id="main-footer">
   <div class="wrapper">
     <div class="main-footer-text">
-      <p>Made with ❤️ by <base-link :href="'https://darkyne.com'">Darkyne</base-link></p>
-      <p>&copy; {{ new Date().getFullYear()}}</p>
+      <p>&copy; {{ new Date().getFullYear()}} <base-link :href="'https://darkyne.com'">Darkyne</base-link></p>
     </div>
   </div>
 </footer>
