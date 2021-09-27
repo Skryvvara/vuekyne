@@ -12,7 +12,6 @@ module.exports = {
       .plugin('html')
       .tap(args => {
         args[0].title = 'Darkyne'
-        args[0].hash = true
         return args
       })
     }
