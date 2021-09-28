@@ -8,6 +8,11 @@ module.exports = {
       }
     },
     chainWebpack: config => {
+      config.optimization.splitChunks({
+        ...config.optimization.get('splitChunks'),
+        automaticNameDelimiter: '-'
+      }),
+      config.optimization.usedExports(true),
       config
       .plugin('html')
       .tap(args => {

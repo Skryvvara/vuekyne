@@ -51,7 +51,7 @@ export default defineComponent({
   //--colour-green: #158566;
   --colour-green: hsl(163, 73%, 30%);
   --colour-green-100: #edffff;
-  --colour-green-200: #82e4c1;
+  --colour-green-200: #d0fbec;
   --colour-green-900: hsl(163, 73%, 25%);
 }
 

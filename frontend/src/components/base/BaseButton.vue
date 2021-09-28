@@ -21,6 +21,7 @@ export default defineComponent({
     text-decoration: none;
     padding: 10px 10px;
     font-weight: bold;
+    letter-spacing: 0.025ch;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +38,7 @@ export default defineComponent({
 }
 
 .btn-secondary {
-    color: var(--colour-green);
+    color: var(--colour-green-900);
     background: var(--colour-green-200);
     border: 1px solid var(--colour-green-200);
 }
