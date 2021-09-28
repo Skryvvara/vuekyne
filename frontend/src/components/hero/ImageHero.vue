@@ -52,6 +52,13 @@ export default defineComponent({
   }
 }
 
+.image-hero-image img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4/3;
+}
+
 .hide-on-mobile {
     display: none;
   }
