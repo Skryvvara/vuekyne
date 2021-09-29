@@ -4,7 +4,7 @@
       <slot name="text"></slot>
   </div>
   <div class="image-hero-image">
-      <img height="462.75" width="617" loading="lazy" :class="{'hide-on-mobile': hideOnMobile}" :src="imageSrc" :alt="imageAlt">
+      <img height="462.75" width="617" :class="{'hide-on-mobile': hideOnMobile}" :src="imageSrc" :alt="imageAlt">
   </div>
 </div>
 </template>
