@@ -6,7 +6,7 @@
         <a class="title" href="https://darkyne.com">Darkyne</a>
       </div>
       <div class="right">
-        <button class="nav-menu-button" @click="visible = !visible"><menu-icon></menu-icon></button>
+        <button class="nav-menu-button" aria-label="Toggle mobile navigation menu" @click="visible = !visible"><menu-icon></menu-icon></button>
         <ul class="main-nav-list" :class="`main-nav-list-${visible ? 'show' : 'hidden'}`">
           <li class="main-nav-item"><a href="#home" class="main-nav-link"><home-icon></home-icon> Home</a></li>
           <li class="main-nav-item"><a href="#projects" class="main-nav-link"><code-icon></code-icon> Work</a></li>

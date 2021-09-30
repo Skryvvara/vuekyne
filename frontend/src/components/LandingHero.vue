@@ -3,7 +3,7 @@
   <div class="wrapper">
     <image-hero :imageSrc="require('../assets/design_collaboration.svg')" :imageAlt="'People designing a software'" :reverse="false">
       <template v-slot:text>
-        <h1>Hi there! My name is Dimitri and I'm a <span class="app-text">Web Developer</span>.</h1>
+        <h1>Hi there! My name is Dimitri and I am a <span class="app-text">Web Developer</span>.</h1>
         <p>I create lightning fast backend, frontend and database solutions! </p>
         <base-button :href="'#about'">Learn More</base-button>
       </template>

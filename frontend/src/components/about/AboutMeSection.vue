@@ -10,7 +10,7 @@
 
     <image-hero :imageSrc="require('../../assets/website.svg')" :imageAlt="'Boy looking at different UI designs'" :reverse="false">
       <template v-slot:text>
-        <h3><span class="app-text">Improving</span> my <span class="app-text">Skills</span> on a daily basis!</h3>
+        <h3><span class="app-text">Improving</span> my <span class="app-text">Skills</span> every day!</h3>
         <p>Working on apps, websites, apis, etc. I learn how to <strong>create better designs</strong> and how to use <strong>modern technology</strong> every day. This site is made with <strong>TypeScript</strong>, <strong>Vue.js</strong> and <strong>SCSS</strong> for example</p>
       </template>
     </image-hero>
@@ -24,8 +24,8 @@
 
     <image-hero :imageSrc="require('../../assets/risk_free.svg')" :imageAlt="'Girl showing completed Projects'" :reverse="false">
       <template v-slot:text>
-        <h3><span class="app-text">Privacy</span> is a concern!</h3>
-        <p>I'm very concerned with <strong>privacy</strong> and <strong>cybersecurity</strong> thus I'm not only collecting <strong>no data</strong> from you. I'm also keeping you and my website <strong>safe</strong>!</p>
+        <h3><span class="app-text">Privacy</span> is a priority!</h3>
+        <p>I'm very concerned with <strong>privacy</strong> and <strong>cybersecurity</strong> thus I'm not only collecting <strong>no data</strong> from you, I'm also keeping you and my website <strong>safe</strong>!</p>
       </template>
     </image-hero>
   </div>
