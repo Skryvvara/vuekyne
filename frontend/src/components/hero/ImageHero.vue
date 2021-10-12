@@ -55,13 +55,11 @@ export default defineComponent({
 .image-hero-image img {
   height: auto;
   width: 100%;
-  max-width: 100%;
-  aspect-ratio: 4/3;
 }
 
 .hide-on-mobile {
-    display: none;
-  }
+  display: none;
+}
 
 @media only screen and (min-width: 600px) {
   .image-hero {
