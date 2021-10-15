@@ -66,11 +66,11 @@ export interface GithubRepository {
     has_wiki: boolean;
     has_pages: boolean;
     forks_count: number;
-    mirror_url: null;
+    mirror_url: string;
     archived: boolean;
     disabled: boolean;
     open_issues_count: number;
-    license: null;
+    license: string;
     forks: number;
     open_issues: number;
     watchers: number;
