@@ -71,6 +71,7 @@ export default Vue.extend({
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 900;
 }
 .main-header-container {
   display: block;
