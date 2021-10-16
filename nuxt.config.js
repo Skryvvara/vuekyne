@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'frontend',
+    title: 'Darkyne',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,6 +18,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "./assets/sass/main.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -37,10 +38,21 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json', },
+      { code: 'de', iso: 'de-DE', file: 'de.json', },
+    ],
+    detectBrowserLanguage: { alwaysRedirect: false, fallbackLocale: 'en', redirectOn: 'root', useCookie: true, cookieCrossOrigin: false, cookieDomain: null, cookieKey: 'language', cookieSecure: true },
+    defaultLocale: 'en',
+    langDir: '~/locales/'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

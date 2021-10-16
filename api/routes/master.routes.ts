@@ -3,6 +3,6 @@ import GithubRouter from './github.routes';
 
 const Routes = Router();
 
-Routes.use('/api', GithubRouter);
+Routes.use('/v1', GithubRouter);
 
 export = Routes;

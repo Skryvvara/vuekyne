@@ -1,9 +1,10 @@
 {
-  "name": "api",
+  "name": "vuekyne-backend",
   "version": "1.0.0",
-  "description": "a",
+  "description": "express/vue remaster of darkyne.com",
   "main": "index.js",
-  "author": "xdarkyne",
+  "repository": "https://github.com/xdarkyne/vuekyne",
+  "author": "xDarkyne",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -12,7 +13,6 @@
   "dependencies": {
     "axios": "^0.21.4",
     "compression": "^1.7.4",
-    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-ts-cache": "^4.2.3",

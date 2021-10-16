@@ -1,3 +1,35 @@
 {
-  
+  "utils": {
+    "brand-name": "Darkyne"
+  },
+  "pages": {
+    "products": "Produkte",
+    "about": "Wer wir sind",
+    "contact": "Kontakt"
+  },
+  "products": {
+    "erp": {
+      "short-name": "ERP",
+      "name": "Enterprise Resource Planning",
+      "mega-description": "Enterprise Resource Planning"
+    },
+    "wawi": {
+      "short-name": "WaWI / MMS",
+      "name": "Warenwirtschaftssystem",
+      "mega-description": "Warenwirtschaftssystem"
+    },
+    "crm": {
+      "short-name": "CRM",
+      "name": "Customer Relationship Management",
+      "mega-description": "Customer Relationship Management"
+    },
+    "pps": {
+      "short-name": "PPS",
+      "name": "Produktionsplanung- und Steuerungssystem",
+      "mega-description": "Produktionsplanung- und Steuerungssystem"
+    },
+    "custom": {
+      "cta": "Individual Software benötigt? Kontaktiere uns!"
+    }
+  }
 }
