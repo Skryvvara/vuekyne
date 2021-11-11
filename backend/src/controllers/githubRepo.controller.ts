@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { GithubRepository } from "../models/githubRepo.model";
 import { Cache, CacheContainer } from "node-ts-cache";
 import { MemoryStorage } from 'node-ts-cache-storage-memory';
-import AppConfig from '../config/config';
+import { AppConfig } from '../config/config';
 import axios, { AxiosResponse } from "axios";
 
 const repoCache = new CacheContainer(new MemoryStorage());

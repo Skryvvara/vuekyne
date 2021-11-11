@@ -1,40 +1,21 @@
 import { AxiosRequestConfig } from 'axios';
-import dotenv from 'dotenv';
 
-export class AppConfig {
-    NODE_ENV: string
-    PORT: number
-    GITHUB_TOKEN: string
-    GITHUB_CACHE_TTL: number
-    GITHUB_AUTH_HEADER: AxiosRequestConfig
+export abstract class AppConfig {
+    public static NODE_ENV: string = this.getEnv<string>("NODE_ENV");
+    public static PORT: number = this.getEnv<number>("PORT");
+    public static GITHUB_TOKEN: string = this.getEnv<string>("GITHUB_TOKEN");
+    public static GITHUB_CACHE_TTL: number = this.getEnv<number>("GITHUB_CACHE_TTL");
+    public static GITHUB_AUTH_HEADER: AxiosRequestConfig = (this.GITHUB_TOKEN) 
+                                                                ? { headers: {"Authorization": "token "+this.GITHUB_TOKEN} }
+                                                                : undefined;
 
-    constructor(path: string = '../../.env') {
-        this.flushEnv(path);
-    }
-    
-    public flushEnv(path: string) {
-        dotenv.config({
-            path: path
-        });
-
-        this.setValues();
-    }
-
-    private setValues() {
-        this.NODE_ENV = process.env.NODE_ENV;
-        this.PORT = +process.env.PORT || 3000;
-        this.GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-        this.GITHUB_CACHE_TTL = +process.env.GITHUB_CACHE_TTL || 3600;
-        this.GITHUB_AUTH_HEADER = {
-            headers: { }
-        }
-
-        if (this.GITHUB_TOKEN) {
-            this.GITHUB_AUTH_HEADER.headers = {
-                'Authorization': "token " + this.GITHUB_TOKEN
-            }
+    private static getEnv<T>(key: string): T {
+        try {
+            const value: T = <T><unknown>process.env[key];
+            return value;
+        } catch(error: any) {
+            console.error(error);
+            throw error;
         }
     }
 }
-
-export default new AppConfig()
