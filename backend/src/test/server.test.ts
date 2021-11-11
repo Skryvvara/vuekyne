@@ -1,9 +1,10 @@
 import supertest from 'supertest';
 import Server from '../server';
-import AppConfig from '../config/config';
+import { AppConfig } from '../config/config';
 import { GithubRepository } from '../models/githubRepo.model';
+import dotenv from "dotenv";
 
-AppConfig.flushEnv('./.env');
+dotenv.config();
 const server = new Server(AppConfig.PORT);
 
 test('Server default port is 3000', () => {
