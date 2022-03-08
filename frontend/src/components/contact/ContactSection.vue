@@ -4,25 +4,30 @@
     <image-hero :imageSrc="require('../../assets/questions.svg')" :imageAlt="'A customer asking questions'" :reverse="true" :hideOnMobile="true">
       <template v-slot:text>
         <h3>Still have <span class="app-text">Questions</span>? Send me a <span class="app-text">message</span>!</h3>
-        <form action="">
+        <form v-on:submit="this.sendMail">
           <fieldset>
             <legend><label for="email">Email</label></legend>
-            <input type="email" id="email" placeholder="example@email.com">
+            <input v-model="form.email" required type="email" id="email" placeholder="example@email.com">
           </fieldset>
 
           <fieldset>
             <legend><label for="subject">Subject</label></legend>
-            <input type="subject" id="subject" placeholder="Subject">
+            <input v-model="form.subject"  requiredtype="subject" id="subject" placeholder="Subject">
+          </fieldset>
+
+          <fieldset class="dont-show" aria-hidden="true">
+            <legend aria-hidden="true"><label for="honey" aria-hidden="true">Honey</label></legend>
+            <input aria-hidden="true" v-model="form.honey" type="text" id="honey" placeholder="don't fill">
           </fieldset>
 
           <fieldset>
             <legend><label for="message">Message</label></legend>
-            <textarea id="message" placeholder="Your Message"></textarea>
+            <textarea v-model="form.message" required id="message" placeholder="Your Message"></textarea>
           </fieldset>
 
-          <p>⚠️ This form does not work yet. Write me an <base-link :href="'mailto:dimitri.kaiser@lanig-kaiser.com'">email</base-link> instead</p>
+          <p>{{ this.form_message }}</p>
 
-          <button class="form-send-button">Send</button>
+          <button class="form-send-button" type="submit">Send</button>
         </form>
       </template>
     </image-hero>
@@ -42,6 +47,40 @@ export default defineComponent({
     BaseSection,
     BaseLink,
     ImageHero
+  },
+  data() {
+    return {
+      form: {
+        email: '',
+        subject: '',
+        message: '',
+        honey: ''
+      },
+      form_message: ''
+    }
+  },
+  methods: {
+    async sendMail(event: any) {
+      event.preventDefault();
+
+      if (this.form.honey) return;
+      if (!this.form.email || !this.form.subject || !this.form.message) return;
+
+      await this.axios.post('/api/sendmail', {
+        "email": this.form.email,
+        "subject": this.form.subject,
+        "message": this.form.message
+      }).catch((err) => console.error(err));
+
+      this.form = {
+        email: '',
+        subject: '',
+        message: '',
+        honey: ''
+      };
+      this.form_message = 'Thank you for your message!';
+
+    }
   }
 });
 </script>
@@ -53,6 +92,10 @@ form {
   padding: 10px;
   border-radius: 2px;
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.dont-show {
+  display: none;
 }
 
 fieldset {

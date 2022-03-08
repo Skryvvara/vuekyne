@@ -25,13 +25,15 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-ts-cache": "^4.2.3",
-    "node-ts-cache-storage-memory": "^4.2.3"
+    "node-ts-cache-storage-memory": "^4.2.3",
+    "nodemailer": "^6.7.2"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.9.1",
+    "@types/nodemailer": "^6.4.4",
     "@types/supertest": "^2.0.11",
     "concurrently": "^6.2.1",
     "jest": "^27.2.0",

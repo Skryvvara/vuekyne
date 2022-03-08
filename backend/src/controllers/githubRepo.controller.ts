@@ -13,6 +13,7 @@ export class GithubRepoController extends Controller {
 
     @Cache(langCache, {ttl: AppConfig.GITHUB_CACHE_TTL})
     protected static async getRepositoryLanguages(url: string): Promise<string[]> {
+        console.log(AppConfig.GITHUB_CACHE_TTL)
         let result = await axios.get(url, AppConfig.GITHUB_AUTH_HEADER).then((res: AxiosResponse) => res.data);
         let data = Object.keys(result);
         return data;
@@ -33,9 +34,15 @@ export class GithubRepoController extends Controller {
     }
 
     public static getAllGithubRepos = async(req: Request, res: Response) => {
-        const data = await this.getRepositories('https://api.github.com/users/xDarkyne/repos');
-
-        res.json(data);
+        try {
+            const data = await this.getRepositories('https://api.github.com/users/xDarkyne/repos');
+            res.json(data);
+        } catch(error: any) {
+            console.error(error);
+            res.json({
+                msg: error
+            });
+        }
     }
 
 }
