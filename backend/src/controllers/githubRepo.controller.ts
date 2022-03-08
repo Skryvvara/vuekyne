@@ -13,7 +13,6 @@ export class GithubRepoController extends Controller {
 
     @Cache(langCache, {ttl: AppConfig.GITHUB_CACHE_TTL})
     protected static async getRepositoryLanguages(url: string): Promise<string[]> {
-        console.log(AppConfig.GITHUB_CACHE_TTL)
         let result = await axios.get(url, AppConfig.GITHUB_AUTH_HEADER).then((res: AxiosResponse) => res.data);
         let data = Object.keys(result);
         return data;

@@ -1,6 +1,7 @@
 import {Controller} from "./controller";
 import { Request, Response } from 'express';
 import nodemailer from "nodemailer";
+import { sanitize } from 'sanitizer';
 import {AppConfig} from "../config/config";
 
 export class MaiLController extends Controller {
@@ -24,11 +25,11 @@ export class MaiLController extends Controller {
             let info = await transporter.sendMail({
                 from: `Vuekyne <${AppConfig.MAIL_USER}>`, // sender address
                 to: AppConfig.MAIL_TO, // list of receivers
-                subject: body.subject, // Subject line
+                subject: sanitize(body.message), // Subject line
                 text: "New Message", // plain text body
                 html: `
-                    <b>New Message from "${body.email}"</b>
-                    <p>${body.message}</p>
+                    <b>New Message from "${sanitize(body.email)}"</b>
+                    <p>${sanitize(body.message)}</p>
                     `,
             });
 
