@@ -3,8 +3,8 @@
   <div class="wrapper">
     <image-hero :imageSrc="require('../../assets/server.svg')" :imageAlt="'Girl sitting in a server room'" :reverse="true">
       <template v-slot:text>
-        <h3>I'm a <span class="app-text">System Integrator</span> at <span class="app-text">Procter &amp; Gamble</span></h3>
-        <p>With my job at <strong>Procter &amp; Gamble</strong> and my <strong>hobby web development</strong> I gain a lot of experience with both <strong>hardware technologies</strong> aswell as <strong>software technologies</strong>.</p>
+        <h3>I'm a <span class="app-text">Junior DevOps Specialist</span> at <span class="app-text">fintus GmbH.</span></h3>
+        <p>With my job as a DevOps Specialist and my <strong>hobby web development</strong> I gain a lot of experience with both <strong>hardware technologies</strong> as well as <strong>software technologies</strong>.</p>
       </template>
     </image-hero>
 
