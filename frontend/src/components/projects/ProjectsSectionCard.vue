@@ -107,6 +107,8 @@ export default defineComponent({
   .project-card-languages {
     padding: 0 10px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     list-style: none;
     margin-bottom: 6px;
 
@@ -116,10 +118,6 @@ export default defineComponent({
       color: var(--colour-gray-300);
       background: var(--colour-gray-700);
       border-radius: 2px;
-      
-      &:not(:last-child) {
-        margin-right: 4px;
-      }
     }
   }
 
